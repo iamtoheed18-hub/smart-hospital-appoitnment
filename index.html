@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MedCare Hospital - MedCare Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>Med<span class="accent">Care</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline-nav"><i class="fas fa-user"></i> Login</a>
+            <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- 1. HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag"><i class="fas fa-shield-alt"></i> Trusted Healthcare Since 1995</div>
+      <h1 class="hero-title">Your Health, <span>Our Priority</span></h1>
+      <p class="hero-subtitle">Experience world-class medical care with our team of 100+ specialized doctors. From routine check-ups to complex procedures, we're here for you — 24 hours a day, 7 days a week.</p>
+      <div class="hero-buttons">
+        <a href="appointment.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+        <a href="doctors.html" class="btn btn-secondary btn-lg"><i class="fas fa-user-md"></i> Explore Doctors</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-number">100+</div><div class="hero-stat-label">Expert Doctors</div></div>
+        <div class="hero-stat"><div class="hero-stat-number">50K+</div><div class="hero-stat-label">Happy Patients</div></div>
+        <div class="hero-stat"><div class="hero-stat-number">24/7</div><div class="hero-stat-label">Emergency Care</div></div>
+        <div class="hero-stat"><div class="hero-stat-number">20+</div><div class="hero-stat-label">Departments</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. STATS SECTION -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #2563EB;"><i class="fas fa-user-md"></i></div>
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Expert Doctors</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #06b6d4;"><i class="fas fa-users"></i></div>
+        <div class="stat-number" data-target="50000">0</div>
+        <div class="stat-label">Happy Patients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #10b981;"><i class="fas fa-clock"></i></div>
+        <div class="stat-number" data-target="24">0</div>
+        <div class="stat-label">24/7 Hours Available</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon" style="color: #8b5cf6;"><i class="fas fa-hospital"></i></div>
+        <div class="stat-number" data-target="20">0</div>
+        <div class="stat-label">Departments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SERVICES PREVIEW -->
+<section class="section" style="background: var(--off-white, #f8fafc)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Services</span>
+      <h2 class="section-title">Comprehensive Healthcare Services</h2>
+      <p class="section-subtitle">We offer a wide range of medical services to meet your health needs</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Cardiology</h3>
+        <p>Heart care, diagnostics, and treatment with cutting-edge technology</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-brain"></i></div>
+        <h3>Neurology</h3>
+        <p>Expert neurological care for brain and nervous system disorders</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-bone"></i></div>
+        <h3>Orthopedics</h3>
+        <p>Complete bone, joint, and musculoskeletal care</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-baby"></i></div>
+        <h3>Pediatrics</h3>
+        <p>Compassionate healthcare for infants, children, and adolescents</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-spa"></i></div>
+        <h3>Dermatology</h3>
+        <p>Advanced skin care, cosmetic treatments, and dermatological solutions</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+        <h3>Emergency Care</h3>
+        <p>Round-the-clock emergency and trauma care services</p>
+        <a href="services.html" class="service-link">Learn More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WHY CHOOSE US -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">Why MedCare is Your Best Choice</h2>
+      <p class="section-subtitle">We combine medical expertise with compassionate care</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+        <h3>Advanced Technology</h3>
+        <p>State-of-the-art medical equipment and diagnostic tools</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+        <h3>Expert Doctors</h3>
+        <p>Board-certified specialists with decades of experience</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-truck-medical"></i></div>
+        <h3>24/7 Emergency</h3>
+        <p>Round-the-clock emergency services with rapid response</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+        <h3>Patient First</h3>
+        <p>Personalized care plans tailored to each patient's needs</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-file-medical"></i></div>
+        <h3>Insurance Support</h3>
+        <p>We accept all major insurance providers seamlessly</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fas fa-flask"></i></div>
+        <h3>Lab & Pharmacy</h3>
+        <p>In-house laboratory and 24-hour pharmacy services</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. DOCTORS PREVIEW -->
+<section class="section" style="background: var(--off-white, #f8fafc)">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Doctors</span>
+      <h2 class="section-title">Meet Our Expert Physicians</h2>
+      <p class="section-subtitle">Dedicated professionals committed to your health and well-being</p>
+    </div>
+    <div class="doctors-grid">
+      <div class="doctor-card reveal">
+        <div class="doctor-image" style="background: linear-gradient(135deg, #2563EB, #3b82f6);">
+          <div class="doctor-avatar">RK</div>
+          <span class="doctor-badge"><i class="fas fa-star"></i> 4.9</span>
+        </div>
+        <div class="doctor-info">
+          <h3 class="doctor-name">Dr. Rajesh Kumar</h3>
+          <p class="doctor-specialty">Cardiologist</p>
+          <div class="doctor-meta">
+            <span class="doctor-meta-item"><i class="fas fa-briefcase"></i> 15 Years</span>
+            <span class="doctor-meta-item"><i class="fas fa-star"></i> 4.9 Rating</span>
+          </div>
+          <div class="doctor-availability">Available Today</div>
+          <div class="doctor-actions">
+            <a href="appointment.html" class="btn btn-primary">Book Now</a>
+            <a href="doctors.html" class="btn btn-outline">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="doctor-card reveal">
+        <div class="doctor-image" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+          <div class="doctor-avatar">PS</div>
+          <span class="doctor-badge"><i class="fas fa-star"></i> 4.8</span>
+        </div>
+        <div class="doctor-info">
+          <h3 class="doctor-name">Dr. Priya Sharma</h3>
+          <p class="doctor-specialty">Pediatrician</p>
+          <div class="doctor-meta">
+            <span class="doctor-meta-item"><i class="fas fa-briefcase"></i> 12 Years</span>
+            <span class="doctor-meta-item"><i class="fas fa-star"></i> 4.8 Rating</span>
+          </div>
+          <div class="doctor-availability">Available Today</div>
+          <div class="doctor-actions">
+            <a href="appointment.html" class="btn btn-primary">Book Now</a>
+            <a href="doctors.html" class="btn btn-outline">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="doctor-card reveal">
+        <div class="doctor-image" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa);">
+          <div class="doctor-avatar">AP</div>
+          <span class="doctor-badge"><i class="fas fa-star"></i> 4.9</span>
+        </div>
+        <div class="doctor-info">
+          <h3 class="doctor-name">Dr. Amit Patel</h3>
+          <p class="doctor-specialty">Neurologist</p>
+          <div class="doctor-meta">
+            <span class="doctor-meta-item"><i class="fas fa-briefcase"></i> 18 Years</span>
+            <span class="doctor-meta-item"><i class="fas fa-star"></i> 4.9 Rating</span>
+          </div>
+          <div class="doctor-availability">Available Today</div>
+          <div class="doctor-actions">
+            <a href="appointment.html" class="btn btn-primary">Book Now</a>
+            <a href="doctors.html" class="btn btn-outline">Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="doctor-card reveal">
+        <div class="doctor-image" style="background: linear-gradient(135deg, #10b981, #34d399);">
+          <div class="doctor-avatar">SR</div>
+          <span class="doctor-badge"><i class="fas fa-star"></i> 4.7</span>
+        </div>
+        <div class="doctor-info">
+          <h3 class="doctor-name">Dr. Sneha Reddy</h3>
+          <p class="doctor-specialty">Orthopedic Surgeon</p>
+          <div class="doctor-meta">
+            <span class="doctor-meta-item"><i class="fas fa-briefcase"></i> 10 Years</span>
+            <span class="doctor-meta-item"><i class="fas fa-star"></i> 4.7 Rating</span>
+          </div>
+          <div class="doctor-availability">Available Today</div>
+          <div class="doctor-actions">
+            <a href="appointment.html" class="btn btn-primary">Book Now</a>
+            <a href="doctors.html" class="btn btn-outline">Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;" class="reveal">
+      <a href="doctors.html" class="btn btn-outline btn-lg"><i class="fas fa-users"></i> View All Doctors</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. TESTIMONIALS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-title">What Our Patients Say</h2>
+      <p class="section-subtitle">Real stories from real patients who trust MedCare</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">The care I received at MedCare was exceptional. Dr. Kumar and his team treated my heart condition with such expertise and compassion. I'm forever grateful.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div class="author-info">
+            <h4>Arjun M.</h4>
+            <p>Patient</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">From the moment I walked in, the staff made me feel comfortable. The facilities are world-class and the doctors are truly the best.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SP</div>
+          <div class="author-info">
+            <h4>Sneha P.</h4>
+            <p>Patient</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">MedCare's emergency response saved my father's life. The ambulance arrived within minutes and the ER team was incredible.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div class="author-info">
+            <h4>Rohit K.</h4>
+            <p>Patient</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content reveal">
+      <h2>Ready to Take the First Step Towards Better Health?</h2>
+      <p>Book your appointment today and experience healthcare that puts you first. Our expert team is ready to help you.</p>
+      <div class="cta-buttons">
+        <a href="appointment.html" class="btn btn-secondary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+        <a href="contact.html" class="btn btn-outline btn-lg" style="border-color: white; color: white;"><i class="fas fa-phone-alt"></i> Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Med<span class="accent">Care</span></span>
+                </a>
+                <p class="footer-desc">Providing world-class healthcare services with compassion and excellence since 1995. Your health is our top priority.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurology</a></li>
+                    <li><a href="#">Orthopedics</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Dermatology</a></li>
+                    <li><a href="#">Oncology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Emergency Contact</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-ambulance"></i> +91 112 (Ambulance)</p>
+                    <p><i class="fas fa-envelope"></i> emergency@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Avenue, Medical District, Mumbai - 400001</p>
+                </div>
+                <h4 class="mt-2">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MedCare Hospital. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.js"></script>
+</body>
+</html>

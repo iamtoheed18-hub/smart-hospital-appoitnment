@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmed - MedCare Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>Med<span class="accent">Care</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline-nav"><i class="fas fa-user"></i> Login</a>
+            <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<section class="confirmation-section reveal">
+  <div class="confirmation-card">
+    <div class="confirmation-icon">
+      <i class="fas fa-check-circle"></i>
+    </div>
+    <h2>Appointment Booked Successfully!</h2>
+    <p>Your appointment has been confirmed. You will receive a confirmation email shortly.</p>
+    <div class="confirmation-details" id="confirmationDetails">
+      <!-- JS will populate this with appointment data from localStorage -->
+      <div class="confirmation-detail-row">
+        <span class="label">Appointment ID</span>
+        <span class="value" id="confId">APT-XXXXXXX</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Patient Name</span>
+        <span class="value" id="confPatient">-</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Doctor</span>
+        <span class="value" id="confDoctor">-</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Department</span>
+        <span class="value" id="confDepartment">-</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Date</span>
+        <span class="value" id="confDate">-</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Time</span>
+        <span class="value" id="confTime">-</span>
+      </div>
+      <div class="confirmation-detail-row">
+        <span class="label">Status</span>
+        <span class="value"><span class="status-badge status-confirmed">Confirmed</span></span>
+      </div>
+    </div>
+    <div class="confirmation-actions">
+      <a href="dashboard.html" class="btn btn-primary"><i class="fas fa-columns"></i> Go to Dashboard</a>
+      <a href="index.html" class="btn btn-outline"><i class="fas fa-home"></i> Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Med<span class="accent">Care</span></span>
+                </a>
+                <p class="footer-desc">Providing world-class healthcare services with compassion and excellence since 1995. Your health is our top priority.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurology</a></li>
+                    <li><a href="#">Orthopedics</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Dermatology</a></li>
+                    <li><a href="#">Oncology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Emergency Contact</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-ambulance"></i> +91 112 (Ambulance)</p>
+                    <p><i class="fas fa-envelope"></i> emergency@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Avenue, Medical District, Mumbai - 400001</p>
+                </div>
+                <h4 class="mt-2">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MedCare Hospital. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.js"></script>
+</body>
+</html>

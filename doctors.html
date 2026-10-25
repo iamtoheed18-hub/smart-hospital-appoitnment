@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - MedCare Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>Med<span class="accent">Care</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="doctors.html" class="active">Doctors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline-nav"><i class="fas fa-user"></i> Login</a>
+            <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<section class="page-header" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(6, 182, 212, 0.9)); color: white; padding: 4rem 0; text-align: center;">
+    <div class="container reveal">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 700;">Our Doctors</h1>
+        <div class="breadcrumb" style="color: rgba(255,255,255,0.8);"><a href="index.html" style="color: white; text-decoration: none;">Home</a> / Our Doctors</div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Team</span>
+      <h2 class="section-title">World-Class Medical Professionals</h2>
+      <p class="section-subtitle">Our doctors are leaders in their fields, bringing decades of experience and dedication</p>
+    </div>
+    
+    <!-- Department Filter -->
+    <div class="filter-container reveal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 3rem;">
+      <button class="filter-btn active btn btn-outline-nav" data-filter="all">All Doctors</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="cardiology">Cardiology</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="neurology">Neurology</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="orthopedics">Orthopedics</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="pediatrics">Pediatrics</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="dermatology">Dermatology</button>
+      <button class="filter-btn btn btn-outline-nav" data-filter="oncology">Oncology</button>
+    </div>
+    
+    <div class="doctors-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;">
+      
+      <!-- Doctor 1 -->
+      <div class="doctor-card reveal" data-department="cardiology" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #2563EB, #3b82f6); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #2563EB; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                RK
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.9
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Rajesh Kumar</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Cardiologist</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 15 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card reveal" data-department="pediatrics" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #06b6d4, #22d3ee); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #06b6d4; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                PS
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.8
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Priya Sharma</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Pediatrician</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 12 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 3 -->
+      <div class="doctor-card reveal" data-department="neurology" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #8b5cf6, #a78bfa); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #8b5cf6; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                AP
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.9
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Amit Patel</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Neurologist</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 18 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--text-secondary);"><i class="fas fa-clock"></i> Available Tomorrow</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 4 -->
+      <div class="doctor-card reveal" data-department="orthopedics" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #10b981, #34d399); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #10b981; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                SR
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.7
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Sneha Reddy</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Orthopedic Surgeon</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 10 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 5 -->
+      <div class="doctor-card reveal" data-department="dermatology" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #f59e0b, #fbbf24); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #f59e0b; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                AI
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.8
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Ananya Iyer</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Dermatologist</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 8 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 6 -->
+      <div class="doctor-card reveal" data-department="orthopedics" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #ef4444, #f87171); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #ef4444; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                VS
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.9
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Vikram Singh</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Orthopedic Surgeon</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 20 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--text-secondary);"><i class="fas fa-clock"></i> Available Monday</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 7 -->
+      <div class="doctor-card reveal" data-department="oncology" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #6366f1, #818cf8); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #6366f1; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                DJ
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.9
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Deepak Joshi</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Oncologist</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 22 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+      <!-- Doctor 8 -->
+      <div class="doctor-card reveal" data-department="neurology" style="background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid var(--light-gray); transition: transform 0.3s ease;">
+        <div class="doctor-image" style="height: 150px; background: linear-gradient(135deg, #ec4899, #f472b6); position: relative; display: flex; align-items: center; justify-content: center;">
+            <div class="doctor-avatar" style="width: 100px; height: 100px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: #ec4899; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: translateY(40px);">
+                KD
+            </div>
+            <div class="doctor-badge" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.9); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600; color: var(--warning);">
+                <i class="fas fa-star"></i> 4.8
+            </div>
+        </div>
+        <div class="doctor-info" style="padding: 3rem 1.5rem 1.5rem; text-align: center;">
+            <h3 class="doctor-name" style="font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.25rem;">Dr. Kavita Desai</h3>
+            <p class="doctor-specialty" style="color: var(--primary); font-weight: 500; margin-bottom: 1rem;">Neurologist</p>
+            <div class="doctor-meta" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.875rem; color: var(--text-secondary);">
+                <span><i class="fas fa-briefcase"></i> 14 Years Exp.</span>
+                <span class="doctor-availability" style="color: var(--success);"><i class="fas fa-clock"></i> Available Today</span>
+            </div>
+            <div class="doctor-actions" style="display: flex; gap: 0.5rem;">
+                <a href="appointment.html" class="btn btn-primary" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Book Now</a>
+                <a href="#" class="btn btn-outline-nav" style="flex: 1; padding: 0.5rem; font-size: 0.875rem;">Profile</a>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-section section" style="background-color: var(--light-cyan); text-align: center; padding: 5rem 0;">
+    <div class="container reveal">
+        <h2 style="font-size: 2.25rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">Ready to take care of your health?</h2>
+        <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Book an appointment with our experienced specialists today and take the first step towards better health.</p>
+        <a href="appointment.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment Now</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Med<span class="accent">Care</span></span>
+                </a>
+                <p class="footer-desc">Providing world-class healthcare services with compassion and excellence since 1995. Your health is our top priority.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Neurology</a></li>
+                    <li><a href="#">Orthopedics</a></li>
+                    <li><a href="#">Pediatrics</a></li>
+                    <li><a href="#">Dermatology</a></li>
+                    <li><a href="#">Oncology</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Emergency Contact</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-ambulance"></i> +91 112 (Ambulance)</p>
+                    <p><i class="fas fa-envelope"></i> emergency@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Avenue, Medical District, Mumbai - 400001</p>
+                </div>
+                <h4 class="mt-2">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MedCare Hospital. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./js/main.js"></script>
+</body>
+</html>

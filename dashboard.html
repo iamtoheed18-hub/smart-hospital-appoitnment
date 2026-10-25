@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - MedCare Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- Navbar (always scrolled style) -->
+<nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <span>Med<span class="accent">Care</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline-nav"><i class="fas fa-user"></i> Login</a>
+            <a href="appointment.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Dashboard Layout -->
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-profile">
+      <div class="sidebar-avatar" id="sidebarAvatar">JD</div>
+      <div class="sidebar-name" id="sidebarName">John Doe</div>
+      <div class="sidebar-email" id="sidebarEmail">john@example.com</div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="sidebar-nav-item active" data-tab="overview"><i class="fas fa-th-large"></i> Overview</a>
+      <a href="#" class="sidebar-nav-item" data-tab="appointments"><i class="fas fa-calendar-check"></i> Appointments</a>
+      <a href="#" class="sidebar-nav-item" data-tab="records"><i class="fas fa-file-medical"></i> Medical Records</a>
+      <a href="#" class="sidebar-nav-item" data-tab="prescriptions"><i class="fas fa-prescription"></i> Prescriptions</a>
+      <a href="#" class="sidebar-nav-item" data-tab="settings"><i class="fas fa-cog"></i> Settings</a>
+      <a href="#" class="sidebar-nav-item" id="logoutBtn" style="color: var(--danger);"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <div class="dashboard-welcome">
+      <h1>Welcome back, <span id="dashboardName">John</span>! 👋</h1>
+      <p>Here's an overview of your health activity and upcoming appointments.</p>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="dashboard-stats">
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon blue"><i class="fas fa-calendar-check"></i></div>
+        <div class="dash-stat-info"><h3>3</h3><p>Total Appointments</p></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon green"><i class="fas fa-check-circle"></i></div>
+        <div class="dash-stat-info"><h3>1</h3><p>Completed</p></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon cyan"><i class="fas fa-clock"></i></div>
+        <div class="dash-stat-info"><h3>1</h3><p>Upcoming</p></div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dash-stat-icon purple"><i class="fas fa-hourglass-half"></i></div>
+        <div class="dash-stat-info"><h3>1</h3><p>Pending</p></div>
+      </div>
+    </div>
+
+    <!-- Upcoming Appointments -->
+    <div class="dashboard-card">
+      <div class="dashboard-card-header">
+        <h3><i class="fas fa-calendar-alt" style="color: var(--primary); margin-right: 0.5rem;"></i> Upcoming Appointments</h3>
+        <a href="appointment.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-plus"></i> New Appointment</a>
+      </div>
+      <div class="dashboard-card-body">
+        <div class="appointment-list" id="appointmentList">
+          <!-- Appointment items will be populated by JS -->
+          <!-- Default/fallback content: -->
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon"><i class="fas fa-user-md"></i></div>
+              <div class="appointment-details">
+                <h4>Dr. Rajesh Kumar - Cardiology</h4>
+                <p><i class="fas fa-calendar"></i> October 2, 2026 &nbsp; <i class="fas fa-clock"></i> 10:00 AM</p>
+              </div>
+            </div>
+            <span class="status-badge status-confirmed">Confirmed</span>
+          </div>
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon"><i class="fas fa-user-md"></i></div>
+              <div class="appointment-details">
+                <h4>Dr. Priya Sharma - Pediatrics</h4>
+                <p><i class="fas fa-calendar"></i> October 5, 2026 &nbsp; <i class="fas fa-clock"></i> 2:30 PM</p>
+              </div>
+            </div>
+            <span class="status-badge status-pending">Pending</span>
+          </div>
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon"><i class="fas fa-user-md"></i></div>
+              <div class="appointment-details">
+                <h4>Dr. Amit Patel - Neurology</h4>
+                <p><i class="fas fa-calendar"></i> September 20, 2026 &nbsp; <i class="fas fa-clock"></i> 11:00 AM</p>
+              </div>
+            </div>
+            <span class="status-badge status-completed">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="dashboard-card">
+      <div class="dashboard-card-header">
+        <h3><i class="fas fa-history" style="color: var(--primary); margin-right: 0.5rem;"></i> Recent Activity</h3>
+      </div>
+      <div class="dashboard-card-body">
+        <div class="appointment-list">
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon" style="background: rgba(16,185,129,0.08); color: var(--success);"><i class="fas fa-check"></i></div>
+              <div class="appointment-details">
+                <h4>Appointment Completed</h4>
+                <p>Consultation with Dr. Amit Patel - Neurology</p>
+              </div>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Sep 20, 2026</span>
+          </div>
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon" style="background: rgba(37,99,235,0.08); color: var(--primary);"><i class="fas fa-file-medical"></i></div>
+              <div class="appointment-details">
+                <h4>Medical Report Generated</h4>
+                <p>Blood Test Results - All parameters normal</p>
+              </div>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Sep 18, 2026</span>
+          </div>
+          <div class="appointment-item">
+            <div class="appointment-info">
+              <div class="appointment-icon" style="background: rgba(245,158,11,0.08); color: var(--warning);"><i class="fas fa-prescription"></i></div>
+              <div class="appointment-details">
+                <h4>Prescription Updated</h4>
+                <p>Dr. Rajesh Kumar updated your medication plan</p>
+              </div>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Sep 15, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
